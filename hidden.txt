@@ -1,0 +1,5 @@
+hidden.txt
+
+There is a hidden directory that can be found by going to https://thewikion.neocities.org/.hidden/, to edit it, follow this URL https://neocities.org/dashboard?dir=%2F.hidden
+
+This folder is used in this article https://thewikion.neocities.org/wiki/hidden_directories.html

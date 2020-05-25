@@ -1,0 +1,31 @@
+body {
+	background-color: #cccccc;
+	color: #000000;
+	font-family: "Arial", "Times";
+	max-width: 1100px;
+	margin: 0 15% 0 5%;
+}
+.tag {
+	padding: 10px;
+	border: 5px solid gray;
+	margin: 0;
+	background-color: MediumSeaGreen;
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #767676;
+}
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+a {
+	color: #313131;
+}
+a:hover {
+	color: #1f1f1f;
+}
