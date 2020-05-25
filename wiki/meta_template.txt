@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>title</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+<!--                                                                  -->
+<!-- Because you are reading this, it must mean only one thing; you   -->
+<!-- are looking at our page source, well, hope you like the          -->
+<!-- look of it!                                                      -->
+<!--                                                                  -->
+<!-- The Penny's Pages Wiki was made by members of the Neocities      -->
+<!-- webhost, for your enjoyment, and our pain. We hope that you are  -->
+<!-- enjoying reading our articles.                                   -->
+<!--                                                                  -->
+<!-- Penny's Pages is composed of original material, and may be used  -->
+<!-- as long as you follow CC BY-NC-SA 3.0                            -->
+<!--                                                                  -->
+<!-- Our URL: https://thewikion.neocities.org/                        -->
+<!--                                                                  -->
+<!-- Enjoy the rest of your night, young Internet search astronaut!   -->
+<!--                                                                  -->
+<h1>title</h1>
+<em><tt>Also see <a href="xyz.html">XYZ</a>, <a href="123.html">123</a></tt></em>
+<p>
+This is where you should write about the subject. This artical is going to <a href="404.html">link to another subject on the wiki</A>, this link is <a href="https://www.youtube.com/watch?v=tKjZuykKY1I" target="_blank">going to link to an outside link</a>.</p>
+<img src="img/xxx" align=right hspace=15 vspace=5>
+<p>
+<tt><blockquote>
+This is a quote box, for quotes!</p>
+</tt>
+<p>
+- Somebody</p>
+</blockquote>
+<p>
+<h2><a href="#New Part of The Artical">New Part of The Artical</a><a name="New Part of The Artical"></a></h2>
+More text should go here.
+<hr>
+<tt>
+References<br>
+I. one<br>
+<a href="" target="_blank"></a> [<a href="" target="_blank">Internet Archive</a>, <a href="" target="_blank">archive.is</a>]
+<p>
+II. two<br>
+<a href="" target="_blank"></a> [<a href="" target="_blank">Internet Archive</a>, <a href="" target="_blank">archive.is</a>]
+<p>
+III. three<br>
+<a href="" target="_blank"></a> [<a href="" target="_blank">Internet Archive</a>, <a href="" target="_blank">archive.is</a>]
+<p>
+This page was last updated: dd/mm/yyyy @ hh:mm</p>
+<p>
+In total this page has had NUMBER updates since it was uploaded.</p>
+</tt>
+<font color="black"><center>&#x2605;</center></font>
+  </body>
+</html>

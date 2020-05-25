@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>Neocities Goes HTTPS (January 2017)</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+<!--                                                                  -->
+<!-- Because you are reading this, it must mean only one thing; you   -->
+<!-- are looking at our page source, well, hope you like the          -->
+<!-- look of it!                                                      -->
+<!--                                                                  -->
+<!-- The Penny's Pages Wiki was made by members of the Neocities      -->
+<!-- webhost, for your enjoyment, and our pain. We hope that you are  -->
+<!-- enjoying reading our articles.                                   -->
+<!--                                                                  -->
+<!-- Penny's Pages is composed of original material, and may be used  -->
+<!-- as long as you follow CC BY-NC-SA 3.0                            -->
+<!--                                                                  -->
+<!-- Our URL: https://thewikion.neocities.org/                        -->
+<!--                                                                  -->
+<!-- Enjoy the rest of your night, young Internet search astronaut!   -->
+<!--                                                                  -->
+<h1>Neocities Goes HTTPS (January 2017)</h1>
+On News Years Day 2017, all subdomain websites on Neocities would switch from using <a href="https://en.wikipedia.org/wiki/HTTP" target="_blank">HTTP (Hypertext Transfer Protocol)</a>, to that of <a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank">HTTPS (Hypertext Transfer Protocol Secure)</a>. HTTPS is an extension of the HTTP for secure communication over a computer network, and is widely used on the Web. <img src="img/http_vs_https_by_14jammar.png" align=right hspace=15 vspace=5>In HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS), or formerly, its predecessor, Secure Sockets Layer (SSL). The protocol is therefore also often referred to as HTTP over TLS, or HTTP over SSL. 
+<p>
+Neocities switching to HTTPS was first announced in November of 2016, on The Neocities Blog. Owner of Neocities, <a href="people_kyle_drake.html">Kyle Drake</A>, wrote on the blog that Neocities is switching to HTTPS as to;</p>
+<p>
+<tt><blockquote>
+[P]rotect your users, it's critical that we switch to default encryption and make it harder to violate your user's privacy.</p>
+<p>
+In addition, search engines have recently said they will start penalizing unencrypted sites in search results, meaning that without default SSL, your site will be less likely to show up on search results. We obviously don't want that to happen, so that is another large motivator.</p>
+</tt></blockquote>
+<p>
+The process of updating all websites to HTTPS took around five days to complete.</p>
+<p>
+Because of Neocites switching to HTTPS, some resources loaded over HTTP (images, JavaScript, CSS, music, iframes, etc) would no longer work. This issue was noted by American Neocities' member, <a href="https://neocities.org/site/jeremyredhead" target="_blank">JeremyRedhead</A>, who in early January 2017, in an E-Mail posted on <a href="neomail.html">NeoMail</A>, wrote a how to guide for how people should deal with this possible issue;</p>
+<p>
+<tt><blockquote>
+Hello all, this is Jeremy here.<br><br></div>As you all probably now know, all Neocities sites default to HTTPS, i.e, unless you're using a very old browser that doesn't understand <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HSTS</a>, it is now basically impossible to load your site over the (insecure) HTTP protocol.
+
+
+Although this is probably a good thing in the long run, as <a target="_blank" href="https://blog.neocities.org/default-ssl.html">mentioned on the Neocities blog</a>, it will break some sites the way they're currently set up, <b>maybe even yours</b>.
+
+<i>However</i> -- Don't panic! I'm here to help&nbsp; :)
+
+Step 1:<br>
+Find and identify any resources (images, javascript, css, music, iframes, etc) loaded over http. Note that this also includes insecure links that open in frames.
+<p>
+Example: &lt;img src="<a href="http://example.com/exampl">http://example.com/example-image.jpg</a>"&gt;<br><br></div>Note that the most<b> </b>important changes you must make are to javascript, css, iframes, and "frame-links". Images and music will still sometimes be loaded over http, albeit often with a complaint from the browser.<br></div>However, browsers <b>WILL NOT</b> load any insecure javascript, css, or sites in iframes.<br></div>So focus your efforts there first!<br></div><br></div></div><div>Step 2:<br></div></div>Anything hosted on another site that supports https, just change the protocol to either https, or "relative", which loads based on the protocol the page is being used over.<br></div>If it's another neocities site, this should be easy!<br></div><br>Example of https: &lt;img src="<a href="https://anlucas.neocities">https://anlucas.neocities</a><wbr>.org/worldwideweb_badge.gif"&gt;<br>Example of relative: &lt;img src="//<a href="http://anlucas.neocities.org/w">anlucas.neocities.org/w</a><wbr>orldwideweb_badge.gif"&gt;<br><br></div>If the site doesn't support https, you can do a couple different things:<br></div><br></div></div>If the resource is, for example, something that's intended to be shared, or in the public domain like a 88x31 button gif, you can probably safely download and re-host it on your site<br></div>Example before: &lt;img src="<a href="http://www.hat.net/abs/gi">http://www.hat.net/abs/gi</a><wbr>f/noclick.gif"&gt; <br>Example after: &lt;img src="/noclick.gif"&gt;<br><br></div>If the resource is very large, or you don't think you're allowed to re-host it, like music or propriety javascript, then you can try saving/hosting it in the <a target="_blank" href="https://archive.org/web/">Internet Archive</a>, which supports https. Unfortunately, it also obeys <a target="_blank" href="http://www.robotstxt.org">robots.txt</a>, so this might not always work.<br></div>There are also a variety of music and other anonymous file hosting services, so trying googling around some too.<br><br></div>Finally, if you have a link that opens in a frame that doesn't support https, just open it in a new tab! :)<br><br></div>Step 3:<br>There is no no step three!<br></div>Congratulations, you're done! :D<br></div>See, that wasn't that hard.<br></div><br></div><div>Please feel free to share this, I am releasing it under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a>.<br></div><div><br>Thank you for reading!
+</tt></blockquote>
+<hr>
+<tt>
+References<br>
+I. HTTPS<br>
+<a href="https://en.wikipedia.org/wiki/HTTPS" target="_blank">https://en.wikipedia.org/wiki/HTTPS</a>
+<p>
+II. 3 June 2017 @ 21:02 - Same Old Crap [Written on the 1st]<br>
+<a href="https://owlman.neocities.org/news.html#3%20June%202017%20@%2021:02%20-%20Same%20Old%20Crap%20[Written%20on%20the%201st]" target="_blank">https://owlman.neocities.org/news.html#3%20June%202017%20@%2021:02%20-%20Same%20Old%20Crap%20[Written%20on%20the%201st]</a>
+<p>
+III. NeoMail -- Neocities defaulting to https</br>
+<a href="https://owlman.neocities.org/neomail/neomail_neocities_defaulting_to_https.html" target="_blank">https://owlman.neocities.org/neomail/neomail_neocities_defaulting_to_https.html</a>
+<p>
+III. IMPORTANT: We're switching to default SSL (HTTPS). Here's what you need to know.</br>
+<a href="https://blog.neocities.org/default-ssl.html" target="_blank">https://blog.neocities.org/default-ssl.html</a>
+<p>This page was last updated: 08/09/2018 @ 00:09</p>
+<p>In total this page has had 0 updates since it was uploaded.</p>
+</tt>
+<font color="black"><center>&#x2605;</center></font>
+  </body>
+</html>
