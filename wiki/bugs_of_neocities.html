@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <title>Bugs of Neocities</title>
+  <link href="style.css" rel="stylesheet" type="text/css" media="all">
+<!--                                                                  -->
+<!-- Because you are reading this, it must mean only one thing; you   -->
+<!-- are looking at our page source, well, hope you like the          -->
+<!-- look of it!                                                      -->
+<!--                                                                  -->
+<!-- The Penny's Pages Wiki was made by members of the Neocities      -->
+<!-- webhost, for your enjoyment, and our pain. We hope that you are  -->
+<!-- enjoying reading our articles.                                   -->
+<!--                                                                  -->
+<!-- Penny's Pages is composed of original material, and may be used  -->
+<!-- as long as you follow CC BY-NC-SA 3.0                            -->
+<!--                                                                  -->
+<!-- Our URL: https://thewikion.neocities.org/                        -->
+<!--                                                                  -->
+<!-- Enjoy the rest of your night, young Internet search astronaut!   -->
+<!--                                                                  -->
+<h1>Bugs of Neocities</h1>
+<div class="tag">
+<img src="img/pinned.png" align=left hspace=15 vspace=5>
+<h3>This is a <a href="meta_tags.html">pinned message box</a></h3>
+<p>
+Neocities has a lot more errors/bugs. You can research some of them by looking around on the <a href="https://github.com/neocities/neocities/issues?utf8=&#x2713;&#x26;q=is%3Aissue" target="_blank">Neocities Github issues forum</A>. You can also find out other bugs by perhaps asking older users.
+<p>
+<p><hr>
+<tt>31/07/2018</tt>
+</div>
+<p>
+<tt><blockquote>
+I'm in part making a wiki about the website host, Neocities, and one of the articles on the wiki is about bugs on the website host.
+<p>
+I'm drowning in pussy.</p>
+</tt>
+- <a href="people_owlman.html">Clive Python</A> on about writing this article.
+</blockquote>
+<p>
+No product can ever be water-tight, everything has at least one flaw, the same logic goes for Neocities. Over the years of Neocities' life, a number of bugs, and errors have been noted by the community. Here are just a few of the bugs noted.</p>
+<p>
+<h2><a href="#Editing Profile Comments Not Working">Editing Profile Comments Not Working</a><a name="Editing Profile Comments Not Working"></a></h2>
+One of the most-known bugs on Neocities is that you cannot edit a post that you have made. If you do try and edit a comment that you made, then the "Edit" text will disappear. This error has probably been an issue on Neocities since day one.
+<p>
+An example of this error is seen below, as running on <a href="https://www.mozilla.org/en-US/firefox/61.0.1/releasenotes/" target="_blank">Firefox 61.0.1</A>.</p>
+<p>
+<blockquote>
+<img src="img/what_a_nice_error.gif"></p>
+</blockquote>
+<p>
+<h2><a href="#Usernames Can Contain Spaces">Usernames Can Contain Spaces</a><a name="Usernames Can Contain Spaces"></a></h2>
+Before the 31st of January 2015, website usernames could contain a space, <a href="https://github.com/neocities/neocities/issues/1" target="_blank">according to a user on the Neocities' Github page</A>;
+<p>
+<tt><blockquote>
+On the account settings page (and during sign up process) site/username description says "cannot contain spaces" but the name can successfully be changed to one with spaces.</p>
+<p>
+Visiting the URL of a site with spaces in the name url-encodes the spaces, doesn't give a 404 or other error, and never loads.</p>
+</tt></blockquote>
+<p>
+No known website with a space are currently know to still be around.
+<p>
+<h2><a href="#Uploading an Empty File is Not Possible">Uploading an Empty File is Not Possible</a><a name="Uploading an Empty File is Not Possible"></a></h2>
+Before that of the 19th of January 2015, it was not possible to upload a blank file (or at least a CSS file) to Neocities.
+<p>
+To get this error, you needed to make a blank CSS file on your computer, you then needed to upload it to Neocities. Uploading an empty file results in a "successful" upload, but the file is not actually uploaded.
+<p>
+<h2><a href="#Directories Not Supported">Directories Not Supported</a><a name="Directories Not Supported"></a></h2>
+Before around November 2015, it was not possible to make, or upload directories. This error was noted by a user <a href="https://github.com/neocities/neocities/issues/3" target="_blank">on the Neocities' Github page</A>;
+<p>
+<tt><blockquote>
+Directories cannot be created or uploaded. Additionally, attempting to drag-and-drop a folder into the upload area produces an unfriendly error.</p>
+<p>
+<b>Use case:</b><br>
+Doing local dev and making use of 'images', 'css' and 'js' folders as is best practice results in a site which is incompatible with upload to Neocities :(
+</tt></blockquote>
+<p>
+<h2><a href="#Not Being Able to Delete a Website">Not Being Able to Delete a Website</a><a name="Not Being Able to Delete a Website"></a></h2>
+While not <em>really</em> a bug or error, you were not able to truly delete a website off Neocities, instead it was recommended that you "delete your site files (a solution that [does] <em>not</em> appease the OCD among us)"
+<p>
+This issue was fixed around early February 2015.</p>
+<p>
+<h2><a href="#Missing Images After Changing Site URL">Missing Images After Changing Site URL</a><a name="Missing Images After Changing Site URL"></a></h2>
+<p>
+If a user changes their website address, then their profile will have a number missing images. An example of this error can be seen below with the <a href="new_ownership_of_the_openbooks_website.html">OpenBoox</A> website. To fix this error, a user can simply re-upload <tt>index.html</tt>.
+<p>
+<blockquote>
+<img src="img/openboox.png">
+</blockquote>
+
+
+<h2><a href="#Being able to follow yourself">Being able to follow yourself</a><a name="Being able to follow yourself"></a></h2>
+
+<p>You were able to follow yourself in surf mode. Simply go to your site in surf mode, and click the follow button. Sometime later there was a fix, the follow button dissapeared in surf mode when you were surfing your own site.</p>
+<p>However, it was still possible to follow yourself. On profile pages, there's a function called <code>Site.toggleFollow(siteId, csrfToken)</code>. It toggles you following the site with <code>siteId</code>.</p>
+<p>The <code>csrfToken</code> is easy to figure out. It's on a profile page, typically <code>&lt;input name="csrf_token" type="hidden" value="here will be the CSRF token"&gt;</code>.</p>
+<p>The <code>siteId</code> is harder. If you log in to a different account and go to your profile page, you'll see it when you inspect the follow button in HTML.</p>
+<p>Another but harder strategy is to browse sites and sort them by date. Then find your site. This can be hard. When you've found your website, go to the site's profile page before it, inspect the follow button, write down the <code>siteId</code> and do the same for the site after it. Since <code>siteId</code>s are sequential, your <code>siteId</code> is somewhere in between. Now it's a matter of trying which one works.</p>
+<p><a href="https://github.com/neocities/neocities/pull/226" target="_blank">The problem was fixed</a>, the fix checks makes the server check if the site a who's trying to follow site b, are different sites. If they're different, there will be no follow. Unfollowing is still possible however.</p>
+
+<p>Examples of sites following themselves:</p>
+<ul>
+  <li><a href="//neocities.org/site/syscomindustries" target="_blank">syscomindustries</a>
+  <li><a href="//neocities.org/site/joppiesaus" target="_blank">joppiesaus</a>
+  <li><a href="//neocities.org/site/suyu" target="_blank">suyu</a>
+</ul>
+<p></p>
+<p><a href="https://github.com/neocities/neocities/issues/215" target="_blank">Original bug report</a></p>
+
+<hr>
+<tt>
+References<br>
+I. Editing Profile Comments Not Working<br>
+<a href="https://github.com/neocities/neocities/issues/281" target="_blank">https://github.com/neocities/neocities/issues/281</a>
+<p>
+II. Uploading an Empty File is Not Possible<br>
+<a href="https://github.com/neocities/neocities/issues/2" target="_blank">https://github.com/neocities/neocities/issues/2</a>
+<p>
+III. Ability to "delete" a site<br>
+<a href="https://github.com/neocities/neocities/issues/29" target="_blank">https://github.com/neocities/neocities/issues/29</a>
+<p>
+IV. Tweet by Python<br>
+<a href="https://twitter.com/14Jammar/status/1023712222562975744" target="_blank">https://twitter.com/14Jammar/status/1023712222562975744</A>
+<p>This page was last updated: 11/October/2018 @ 19:45</p>
+<p>In total this page has had 3 updates since it was uploaded.</p>
+</tt>
+<font color="black"><center>&#x2605;</center></font>
+  </body>
+</html>

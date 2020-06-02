@@ -1,0 +1,215 @@
+-- roam
+-- by dotcomboom
+
+-- init functions
+
+function clear()
+	for i=1, 30 do
+		print()
+	end
+end
+
+function new_region()
+			regions[currentregion] = {}
+			regions[currentregion][1] = areas[math.random(#areas)]
+			regions[currentregion][2] = ''
+			regions[currentregion][3] = ''
+end
+function new_item_mob()
+			rarea = regions[currentregion][1]
+			ritem = ''
+			if rarea == 'forest' then
+				if math.random(4) == 1 then
+					ritem = 'log'
+				end
+			elseif rarea == 'desert' then
+				if math.random(3) == 1 then
+					ritem = 'cactus'
+				end
+			end
+			regions[currentregion][2] = ritem
+			rmob = ''
+			if rarea == 'plains' then
+				r = math.random(4)
+				-- 1: no mob
+				if r == 2 then
+					rmob = 'pig'
+				elseif r == 3 then
+					rmob = 'sheep'
+				end
+			elseif rarea == 'hills' then
+				if math.random(3) == 1 then
+					rmob = 'goat'
+				end
+			end
+			regions[currentregion][3] = rmob
+end
+
+-- init variables
+
+areas = {'forest', 'desert', 'plains', 'hills', 'town'}
+
+regions = { }
+		 
+inventory = {}
+
+currentregion = 1
+new_region()
+new_item_mob()
+
+coins = 0
+
+math.randomseed(os.time())
+
+-- start
+
+print([[  ___                 ]])
+print([[ | _ \___  __ _ _ __  ]])
+print([[ |   / _ \/ _` | '  \ ]])
+print([[ |_|_\___/\__,_|_|_|_|]])
+
+print()
+print()
+
+while true do
+
+	print('You are in region ' .. currentregion .. '.')
+	if #regions == currentregion then
+		print("You haven't been here before.")
+		print()
+	end
+	print('It is a ' .. regions[currentregion][1] .. ' area.')
+	
+	if regions[currentregion][2] == '' then else
+		print('You picked up: ' .. regions[currentregion][2] .. '.')
+		inventory[#inventory + 1] = regions[currentregion][2]
+		regions[currentregion][2] = ''
+		print()
+	end
+	if regions[currentregion][3] == '' then else
+		print('There is a ' .. regions[currentregion][3] .. ' near.')
+	end
+	if regions[currentregion][1] == 'town' then
+		print('Activity is bustling here.')
+	end
+	
+	print()
+	
+	if #inventory > 0 then
+		print('Inventory:')
+	
+
+		for key, value in pairs(inventory) do
+			print('  ' .. value)
+		end
+	else
+		print('Your pockets seem to be empty at the moment.')
+	end
+	
+	print()
+	print('You have ' .. coins .. ' coins on hand.')
+	print()
+	print('Will you...')
+	print()
+	print('Go [O]nward?')
+	if currentregion > 1 then
+		print('[B]acktrack?')
+	end
+	print('[V]iew your map?')
+	if regions[currentregion][1] == 'town' then
+		print('[T]rade with the townsfolk?')
+	end
+	
+	option = string.lower(io.read())
+	
+	if option == 'o' then
+		currentregion = currentregion + 1
+		
+		if currentregion > #regions then
+		
+			new_region()
+			new_item_mob()
+	
+		end
+	elseif option == 'b' then
+		if currentregion > 1 then
+			currentregion = currentregion - 1
+			new_item_mob()
+		end
+	end
+	
+	clear()
+	
+	if option == 'v' then
+		print("Let's see here..")
+		print()
+		out = ''
+		for key, value in pairs(regions) do
+			out = out .. key .. ": " .. value[1] .. " area..   "
+		end
+		print(out)
+		print()
+		print('Press ENTER.')
+		io.read()
+		clear()
+	elseif option == 't' then
+		if regions[currentregion][1] == 'town' then
+			print('Welcome to the town marketplace.')
+			if #inventory > 0 then
+				print('Inventory:')
+				for key, value in pairs(inventory) do
+					print('  ' .. value)
+				end
+			else
+				print('Your pockets seem to be empty at the moment.')
+			end
+			print()
+			print('Would you like to..')
+			print('[B]uy?')
+			print('[S]ell?')
+			
+			o2 = string.lower(io.read())
+			print()
+			if o2 == 'b' then
+				print("There doesn't seem to be any offers..")
+			elseif o2 == 's' then
+				print("Log sale price is 2 coins.")
+				print("Cactus sale price is 1 coin.")
+				print()
+				print("What do you want to sell?")
+				o3 = string.lower(io.read())
+				print()
+				amnt = 0
+				profit = 0
+				-- this is funky because I need to do it back to front instead
+				-- of front to back, in order to get all the items since
+				-- table.remove is involved
+				for i=#inventory,1,-1 do
+					
+					key = i
+					value = inventory[i]
+					
+					if value == o3 then
+						table.remove(inventory, key)
+						amnt = amnt + 1
+						if o3 == "log" then
+							profit = profit + 2
+						elseif o3 == "cactus" then
+							profit = profit + 1
+						end
+					end
+				end
+				coins = coins + profit
+				if profit == 1 then
+				print(amnt .. ' ' .. o3 .. ' items sold for a total of ' .. profit .. ' coin.')
+				else
+				print(amnt .. ' ' .. o3 .. ' items sold for a total of ' .. profit .. ' coins.')
+				end
+				print()
+				print('Press ENTER.')
+				io.read()
+			end
+			clear()
+		end
+	end
+end
