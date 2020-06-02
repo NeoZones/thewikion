@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Profile</title>
+</head>
+<body>
+<h1>Website Profile</h1>
+<img align=right hspace=15 src="300px-Wastebot.png" vspace=5 alt="The profile picture for the bot that was made by Heather of wastebin." title="The profile picture for the bot that was made by Heather of wastebin.">
+<p>
+<strong>wastebot</strong> is the name of a Discord bot made by Heather of wastebin, with the tag of <tt>wastebot#0730</tt>. The "primary goal" of the bot "is to not exclude contributors on the basis of innate, benign, or imposed characteristics or circumstances" (<A href="https://glitch.com/edit/#!/wastebot?path=CODE_OF_CONDUCT.md:1:0">The code of conduct for the bot</a>).
+<p>
+The bot first publicly when online on 2018-12-15 (<a href="https://ptb.discordapp.com/channels/518643619956260874/519072495597256712/523364113359831040">The bot's first public words on wastebin's Discord server</a>) on the night mode Discord server, although humorously, line 10 of its code suggests that the bot was first started on 1970-01-01.
+<p>
+<h2>Languages of The Bot</h2>
+The bot itself is written in Python. wastebot's full source code is rather small, making up only 66 lines of code (<A href="https://glitch.com/edit/#!/wastebot?path=wastebot.py">wastebot.py</a>), in comparison to this, the main body of work for another bot that Heather helped with, [[OwlBot]], has 1762 lines of code (<a href="https://github.com/DynTylluan/OwlBot/blob/master/index.js#L1762">OwlBot's <tt>index.js</tt></a>).
+<p>
+Because of this, by using English commands, people are able to give themselves such things as color roles by posting <tt>%color</tt> followed by the name of the color that they desire (<tt>%color that one crayon nobody uses</tt>, for example).
+<p>
+An extract of the code is show below;
+<pre># HELP
+
+help_commands = ("help", "hello", "roles", "enrole", "derole", "color", "bleach")
+
+async def help_action(msg, invoc):
+	name = invoc[1]
+	if name:
+		if name in commands:
+			await msg.channel.send("`%{0.name}`: {0.desc} Usage: `{0.usage}`.".format(commands[name]))
+		else:
+			await msg.channel.send("`uhh, %{}` isn’t even a command. for more information, type `%help`.".format(name))
+	else:
+		await msg.channel.send("Commands: {}".format(", ".join(map("`{}`".format, help_commands))))
+
+commands["help"] = Command("help", "prompts the bot to list commands or describe the specified command.", "%help [%&#x3C;command name>]", re.compile("\s*%help(?:\s+%([a-z-]+))?\s*$"), help_action)</pre>
+
+In this example, the line that starts with "<tt>help_commands</tt>" shows all of the commands without needing the <tt>%</tt> prefix, it also shows what happens if someone types in something that isn't a code (if they made a typo would be an example of this), if that was to happen, then the bot would correct that person.
+
+
+
+
+
+<p>
+<h2>References</h2>
+<ol>
+  <li><a href="https://thewikion.neocities.org/wiki/website_profile.html">Original wiki article about this subject</a></li>
+  <li><a href="https://github.com/MineRobber9000/neowiki/blob/master/articles/site_profile.md">site_profile.md</a></li>
+</ol>
+</body>
+</html>

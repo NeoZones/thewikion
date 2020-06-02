@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Downloading Your Website</title>
+</head>
+<body>
+<h1>Downloading Your Website</h1>
+Any member of Neocities is able to download a copy of their own website in the form of a <a href="https://en.wikipedia.org/wiki/Zip_%28file_format%29">.ZIP file</a>. Once the ZIP file is downloaded, the viewer will see that all of their site's content will have been mirrored in the folder, however, the ZIP archive will not of archived any <a href="https://wiki.neozones.club/index.php?title=Hidden_Directory">hidden directories</a>, there is also the issue that if a site's contents is larger than 200 MB, or if a website has 500 or greater files, then it will not download (<a href="https://github.com/neocities/neocities/blob/9e5dbfa2c6ca6b2fd0d82fa2154df1af87d79c02/models/site.rb#L81">Lines from the source code for the host showing this limit</a>), instead, a message saying that "Cannot download site as zip as it is too large (or contains too many files)" will appear for the user (<a href="https://github.com/neocities/neocities/blob/00cd44878aa6dc3656b9078714c0e76642034942/app/site_files.rb#L191"><tt>if current_site.too_big_to_download?</tt></a>).
+<p>
+A user may download their own website by going to <a href="https://neocities.org/dashboard">their dashboard</a>, and selecting "Download entire site", once this is done, it may take sometime for their site to download, depending on how much space the website is using. Another way of downloading your own website is going to <tt><a href="https://neocities.org/site_files/(your-website-name).zip">https://neocities.org/site_files/(your-website-name).zip</a></tt>.
+<p>
+Despite of the direct link, a person is unable to download another person's website if they are not logged in as that user, for example, if a user tried to download the website of (say) <a href="https://owlman.neocities.org/">OwlMan</a> by going to <tt><a href="https://neocities.org/site_files/owlman.zip">https://neocities.org/site_files/owlman.zip</a></tt>, they would instead just download their own website. Along with this, if a user who is logged off followed the same URL, they would just be redirected to the Neocities' landing page.
+<p>
+If a user follows a link for a website that is not real (for example "<tt><a href="https://neocities.org/site_files/(fake-website-name).zip">https://neocities.org/site_files/(fake-website-name).zip</a></tt>"), then it will still redirect them to a copy of their own ZIP archive.
+<p>
+<h2>References</h2>
+<ol>
+  <li><a href="https://thewikion.neocities.org/wiki/downloading_your_website.html">Original wiki article about this subject</a></li>
+</ol>
+</body>
+</html>

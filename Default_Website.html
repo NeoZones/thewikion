@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Default Website</title>
+</head>
+<body>
+<h1>Default Website</h1>
+Once a new website has been made, the site will use the default layout with the exact same CSS file and image. The look for this page has changed a few times over the years, the most recent version of the layout was made in 2019-11-20.
+<p>
+Along with an <tt>index.html</tt> page, a default website will also have an image file called <tt>neocities.png</tt>, <tt>style.css</tt>, and <tt>not_found.html</tt> for the 404 page.</p>
+<p></p>
+<h2>index.html</h2>
+The <tt>index.html</tt> file (that is the only file on a site that cannot be deleted). Here is the page layout in full; 
+<p></p>
+<pre>&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1.0&#x22;&#x3E;
+    &#x3C;title&#x3E;The web site of &#x3C;%= username %&#x3E;&#x3C;/title&#x3E;
+    &#x3C;!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. --&#x3E;
+    &#x3C;link href=&#x22;/style.css&#x22; rel=&#x22;stylesheet&#x22; type=&#x22;text/css&#x22; media=&#x22;all&#x22;&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;h1&#x3E;Welcome to my Website!&#x3C;/h1&#x3E;
+
+    &#x3C;p&#x3E;This is a paragraph! Here&#x27;s how you make a link: &#x3C;a href=&#x22;https://neocities.org&#x22;&#x3E;Neocities&#x3C;/a&#x3E;.&#x3C;/p&#x3E;
+
+    &#x3C;p&#x3E;Here&#x27;s how you can make &#x3C;strong&#x3E;bold&#x3C;/strong&#x3E; and &#x3C;em&#x3E;italic&#x3C;/em&#x3E; text.&#x3C;/p&#x3E;
+
+    &#x3C;p&#x3E;Here&#x27;s how you can add an image:&#x3C;/p&#x3E;
+    &#x3C;img src=&#x22;/neocities.png&#x22;&#x3E;
+
+    &#x3C;p&#x3E;Here&#x27;s how to make a list:&#x3C;/p&#x3E;
+
+    &#x3C;ul&#x3E;
+      &#x3C;li&#x3E;First thing&#x3C;/li&#x3E;
+      &#x3C;li&#x3E;Second thing&#x3C;/li&#x3E;
+      &#x3C;li&#x3E;Third thing&#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+
+    &#x3C;p&#x3E;To learn more HTML/CSS, check out these &#x3C;a href=&#x22;https://neocities.org/tutorials&#x22;&#x3E;tutorials&#x3C;/a&#x3E;!&#x3C;/p&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</pre>
+<p>
+The title part of the page, <tt>&#x3C;title>The web site of &#x3C;%= username %>&#x3C;/title></tt>, has <tt>&#x3C;%= username %></tt> in it, because of this, it will change the title of the page to "The web site of [user]", the "user" part being the name of the website, for example, if the website was called <tt>neozones</tt>, then the title text would say "The web site of neozones".</p>
+<p>
+The default HTML file content has the following line in it: <tt>&#x3C;link href="/style.css" rel="stylesheet" type="text/css" media="all"></tt>; the <tt>media="all"</tt> is redundant, because <tt>media="all"</tt> is the implicit default, following this, <tt>type="text/css"</tt> is unnecessary on almost all modern browsers.</p>
+<p></p>
+<h2>neocities.png</h2>
+<img align=right hspace=15 src="300px-Default_website.png" vspace=5 alt="An example of what the default website looks like, along with showing what the neocities.png looks like." title="An example of what the default website looks like, along with showing what the neocities.png looks like.">
+<p>
+<tt>neocities.png</tt> is a simple image that is only about 12.9 KB in size. The image is a banner that shows the Neocities mascot, Penny the Cat, along with text telling the viewer that the site is hosted on Neocities.
+<p>
+A SVG version of the same image exists, same for the image of Penny the Cat. Bot of the versions of the iamge can be found on the [https://neocities.org/press press page for the host].
+<p>
+<h2>style.css</h2>
+The default CSS file on Neocities can be easy to understand and read;
+<p></p>
+<pre>/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana;
+}</pre>
+<p>
+The start of the code, the part that has "/*", is unread by the browser. It quickly covers what CSS is in a basic way.</p>
+<p>
+The second part of the CSS file is for the <tt>body</tt> part of the webpage. In the case of this default CSS, it tells the browser that the background colour should be <tt>white</tt> with <tt>black</tt> as the font colour, while the font should be <a href="https://en.wikipedia.org/wiki/Verdana">Verdana</a>, a humanist sans-serif typeface designed by British type designer Matthew Carter for Microsoft in 1996, it is one of the <a href="https://en.wikipedia.org/wiki/Core_fonts_for_the_Web">core fonts for the Web</a>.</p>
+<p></p>
+<h2>not_found.html</h2>
+<img align=right hspace=15 src="300px-Not_found.png" vspace=5 alt="The unchanged not_found.html page." title="The unchanged not_found.html page.">
+The default 404 page is very simple. The <tt>not_found.html</tt> shows the viewer a white background, with the title of "Page Not Found", along with the text "The requested web page was not found on this site".
+<p></p>
+<pre>&#x3C;html>
+  &#x3C;head>
+    &#x3C;title>Page Not Found&#x3C;/title>
+    &#x3C;style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    &#x3C;/style>
+  &#x3C;/head>
+  &#x3C;body>
+    &#x3C;center>
+      &#x3C;h1>Page Not Found&#x3C;/h1>
+      &#x3C;h2>The requested web page was not found on this site.&#x3C;/h2>
+    &#x3C;/center>
+  &#x3C;/body>
+&#x3C;/html></pre>
+<p></p>
+<h2>References</h2>
+<ol>
+  <li><a href="https://thewikion.neocities.org/wiki/default_website.html">Original wiki article about this subject</a></li>
+  <li><a href="https://github.com/neocities/neocities/tree/e223b687b2f6f94db8c58c466c3db4635097c7c3/views/templates">Default templates on the Neocities GitHub</a></li>
+  <li><a href="https://ptb.discordapp.com/channels/518624497780391948/620021021780738059/695355293839786054">joppiesaus taking about the redundant part of the <tt>index.html</tt> file</a></li>
+</ol>
+</body>
+</html>
